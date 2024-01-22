@@ -23,10 +23,11 @@ body {
   font-family: Lato, sans-serif;
   font-style: normal;
   line-height: normal;
+  min-width: 375px;
 }
 section {
   background: #eff2f9;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,7 +78,7 @@ section {
   font-weight: 700;
 
   letter-spacing: 0.38px;
-  margin-bottom: 5px;
+
 }
 .subtitle {
   color: rgba(20, 20, 20, 0.4);
@@ -87,6 +88,7 @@ section {
   font-weight: 400;
 
   letter-spacing: 0.16px;
+  margin-bottom: 60px;
 }
 .text {
   color: rgba(20, 20, 20, 0.7);
@@ -96,7 +98,7 @@ section {
   font-weight: 400;
   line-height: 30px; /* 166.667% */
   letter-spacing: 0.18px;
-  margin: 60px 0 65px;
+  margin-bottom: 65px;
 }
 .colors {
   margin-bottom: 65px;
@@ -112,11 +114,12 @@ section {
 }
 .card {
   width: 1170px;
-  height: 800px;
+  min-height: 800px;
   background: #fff;
   box-shadow: 20px 20px 40px 0 rgba(81, 91, 117, 0.25);
   padding: 60px 0 70px 0;
   display: flex;
+
 }
 ul {
   list-style: none;
@@ -210,4 +213,54 @@ li {
 
 .btn:hover {
   transform: translate(10px, -10px);
+}
+
+@media screen and (max-width: 1180px) {
+  section{
+    align-items:flex-start;
+  }
+  .card {
+   flex-direction: column;
+
+
+  }
+  .preview-wrapper{
+    margin: 30px 0 60px;
+  }
+  .product-image-block{
+    border-right: none;
+    border-bottom: 2px solid rgba(20, 20, 20, 0.15);
+    min-width: auto;
+  }
+  .product-info-block{
+    padding-top: 60px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .main-image {
+    width: 250px;
+  }
+
+  .card {
+    margin: 20px;
+  }
+
+
+
+  .product-info-block {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .text {
+    margin: 50px 0 55px;
+    font-size: 16px;
+  }
+  .main-title{
+    font-size: 34px;
+  }
+  .subtitle{
+    font-size: 14px;
+  }
 }
